@@ -28,14 +28,14 @@ jobs:
         cd target
         mkdir assets
         cd assets
-        wget https://dl.dafont.com/dl/?f=charlotte_5
-        wget https://fonts.google.com/download?family=Ubuntu
+        wget -o charlotte_5.zip https://dl.dafont.com/dl/?f=charlotte_5
+        wget -o Ubuntu.zip https://fonts.google.com/download?family=Ubuntu
         unzip charlotte_5.zip
         unzip Ubuntu.zip
         cd ..
     - name: Gerar Imagem
       run: java -jar BomDiaGenerator-1.0-SNAPSHOT.jar
-    - name: Send file README.md to discord channel
+    - name: Enviar Imagem
       uses: sinshutu/upload-to-discord@master
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
