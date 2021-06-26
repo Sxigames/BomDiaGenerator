@@ -28,8 +28,8 @@ jobs:
         cd target
         mkdir assets
         cd assets
-        wget -o charlotte_5.zip https://dl.dafont.com/dl/?f=charlotte_5
-        wget -o Ubuntu.zip https://fonts.google.com/download?family=Ubuntu
+        wget -O charlotte_5.zip https://dl.dafont.com/dl/?f=charlotte_5
+        wget -O Ubuntu.zip https://fonts.google.com/download?family=Ubuntu
         unzip charlotte_5.zip
         unzip Ubuntu.zip
         cd ..
