@@ -90,7 +90,7 @@ class ImageGenerator {
 
     // Scrapping
     fun fetchDayQuote(): Quote {
-        val url = "https://www.bibliaaleatoria.com.br/"
+        val url = "https://dailyverses.net/get/verse?language=pt"
         val request = HttpRequest.get(url)
             .followRedirects(true)
             .userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36")
@@ -101,8 +101,8 @@ class ImageGenerator {
 
         val jsoup = Jsoup.parse(request.body())
 
-        val author = jsoup.selectFirst("#h > div.container.centered > div > div > div > div > h1 > p > a").text()
-        val phrase = jsoup.selectFirst("#h > div.container.centered > div > div > div > div > h1").text().removeSuffix(author)
+        val author = jsoup.selectFirst(".bibleVerse > a").text()
+        val phrase = jsoup.selectFirst(".bibleText").text()
 
         val quote = Quote(phrase, author)
         logger.debug { "Quote fetched successfully! $quote" }
