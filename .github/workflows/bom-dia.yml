@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: Enviar bom dia no \#geral
 
 on:
   schedule:
@@ -25,16 +25,14 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Download fonts
       run: |
-        cd target
         mkdir assets
         cd assets
         wget -O charlotte_5.zip https://dl.dafont.com/dl/?f=charlotte_5
         wget -O Ubuntu.zip https://fonts.google.com/download?family=Ubuntu
         unzip charlotte_5.zip
         unzip Ubuntu.zip
-        cd ..
     - name: Gerar Imagem
-      run: java -jar BomDiaGenerator-1.0-SNAPSHOT.jar
+      run: java -jar target/BomDiaGenerator-1.0-SNAPSHOT.jar
     - name: Enviar Imagem
       uses: sinshutu/upload-to-discord@master
       env:
