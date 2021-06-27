@@ -15,6 +15,8 @@ import java.time.format.DateTimeFormatter
 import java.time.format.TextStyle
 import java.util.*
 import javax.imageio.ImageIO
+import kotlin.random.Random
+
 
 class ImageGenerator {
     val colors = listOf(
@@ -61,11 +63,11 @@ class ImageGenerator {
         graphics.color = colors.random()
         graphics.drawStringOutline("${date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt-br"))} • $dateFormatted", 10, 690, 2)
 
-        val handle = "@bomdiazap"
-        val url = "https://bomdia.lori.fun"
+        val handle = "Sakura Simulator"
+        val url = "Valtatui"
 
         graphics.drawStringOutline(handle, 700 - graphics.fontMetrics.stringWidth(handle) - 10, 660, 2)
-        graphics.drawStringOutline("https://bomdia.lori.fun", 700 - graphics.fontMetrics.stringWidth(url) - 10, 690, 2)
+        graphics.drawStringOutline(url, 700 - graphics.fontMetrics.stringWidth(url) - 10, 690, 2)
 
         logger.info { "Image generated successfully!" }
 
@@ -90,7 +92,7 @@ class ImageGenerator {
 
     // Scrapping
     fun fetchDayQuote(): Quote {
-        val url = "https://dailyverses.net/get/verse?language=pt"
+        val url = "https://dailyverses.net/get/random?language=arc&isdirect=1&position=" + Random.nextInt(0, 1341)
         val request = HttpRequest.get(url)
             .followRedirects(true)
             .userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36")
