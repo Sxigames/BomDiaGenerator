@@ -37,7 +37,7 @@ class ImageGenerator {
 
         val quote = fetchDayQuote()
 
-        val image = fetchRandomImage(700, 700, "nature")
+        val image = fetchRandomImage(700, 700, "rain")
         val graphics = image.graphics()
 
         val charlotte = Font.createFont(Font.PLAIN, File("assets", "charlotte.ttf"))
@@ -64,7 +64,7 @@ class ImageGenerator {
         graphics.drawStringOutline("${date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt-br"))} • $dateFormatted", 10, 690, 2)
 
         val handle = "Sakura Simulator"
-        val url = "Valtatui"
+        val url = "Luto por Jorge"
 
         graphics.drawStringOutline(handle, 700 - graphics.fontMetrics.stringWidth(handle) - 10, 660, 2)
         graphics.drawStringOutline(url, 700 - graphics.fontMetrics.stringWidth(url) - 10, 690, 2)
