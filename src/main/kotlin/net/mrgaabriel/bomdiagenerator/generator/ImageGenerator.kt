@@ -63,7 +63,7 @@ class ImageGenerator {
         graphics.color = colors.random()
         graphics.drawStringOutline("${date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt-br"))} • $dateFormatted", 10, 690, 2)
 
-        val handle = "Sakura Simulator"
+        val handle = "Bom Dia Generator"
         val url = "Luto por Dante"
 
         graphics.drawStringOutline(handle, 700 - graphics.fontMetrics.stringWidth(handle) - 10, 660, 2)
