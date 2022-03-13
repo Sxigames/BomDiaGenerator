@@ -45,7 +45,7 @@ class ImageGenerator {
         graphics.font = charlotte.deriveFont(96f)
         graphics.color = colors.random()
 
-        graphics.drawCenteredStringWrapOutline("GERJIOGAEIJUH!", 700, 160, 6)
+        graphics.drawCenteredStringWrapOutline("Gerhjur!", 700, 160, 6)
 
         val ubuntuItalic = Font.createFont(Font.PLAIN, File("assets", "Ubuntu-Italic.ttf"))
         val ubuntuRegular = Font.createFont(Font.PLAIN, File("assets", "Ubuntu-Regular.ttf"))
