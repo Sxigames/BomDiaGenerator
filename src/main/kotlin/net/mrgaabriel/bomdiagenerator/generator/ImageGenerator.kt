@@ -45,7 +45,7 @@ class ImageGenerator {
         graphics.font = charlotte.deriveFont(96f)
         graphics.color = colors.random()
 
-        graphics.drawCenteredStringWrapOutline("Gerhjur!", 700, 160, 6)
+        graphics.drawCenteredStringWrapOutline("Sdd da Mãe do Brentt", 700, 160, 6)
 
         val ubuntuItalic = Font.createFont(Font.PLAIN, File("assets", "Ubuntu-Italic.ttf"))
         val ubuntuRegular = Font.createFont(Font.PLAIN, File("assets", "Ubuntu-Regular.ttf"))
@@ -64,7 +64,7 @@ class ImageGenerator {
         graphics.drawStringOutline("${date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt-br"))} • $dateFormatted", 10, 690, 2)
 
         val handle = "Bom Dia Generator"
-        val url = "Luto por Dante"
+        val url = "sim"
 
         graphics.drawStringOutline(handle, 700 - graphics.fontMetrics.stringWidth(handle) - 10, 660, 2)
         graphics.drawStringOutline(url, 700 - graphics.fontMetrics.stringWidth(url) - 10, 690, 2)
